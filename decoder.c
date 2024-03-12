@@ -18,7 +18,9 @@ int main()
     fflush(stdout);
 
     char type;
-    type = getc(stdin);
+    scanf("%c", &type);
+    
+    while ((getchar()) != '\n');
     
     if (type == 'f')
     {
@@ -29,7 +31,6 @@ int main()
     
     else if (type == 'i')
     {
-        printf("b\n");
         fgets(input, 4096, stdin);
     }
     
