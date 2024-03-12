@@ -17,7 +17,6 @@ int main()
         output[i] = 0;
     }
 
-    // add chossing input (file / stdin)
     fgets(input, 255, stdin);
     //printf("%s\n", input);
     

@@ -14,8 +14,25 @@ int main()
         output[i] = 0;
     }
 
-    // add chossing input (file / stdin)
-    fgets(input, 4096, stdin);
+    printf("Input type (f - file/ i - input): ");
+    fflush(stdout);
+
+    char type;
+    type = getc(stdin);
+    
+    if (type == 'f')
+    {
+        FILE * f = fopen("OUTPUT", "r");
+        fread(input, sizeof(input), 1, f);
+        fclose(f);
+    }
+    
+    else if (type == 'i')
+    {
+        printf("b\n");
+        fgets(input, 4096, stdin);
+    }
+    
     //printf("%s", input);
 
     int i=0;
